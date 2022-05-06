@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: onboarding-dev-trigger
+  namespace: onboarding-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: onboarding-dev-triggerbinding
+  template:
+    ref: onboarding-dev-triggertemplate

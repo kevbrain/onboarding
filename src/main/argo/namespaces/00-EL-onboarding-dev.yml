@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: onboarding-dev-eventlistener
+  namespace: onboarding-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: onboarding-dev-trigger
